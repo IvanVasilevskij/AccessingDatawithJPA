@@ -21,8 +21,8 @@ public class Application {
     public CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
             // save a couple of customers
-            repository.save(new Customer("Jack", "Bauer"));
-            repository.save(new Customer("Chloe", "O'Brian"));
+            repository.save(new Customer("AAA", "SSS"));
+            repository.save(new Customer("FF", "SSS"));
             repository.save(new Customer("Kim", "Bauer"));
             repository.save(new Customer("David", "Palmer"));
             repository.save(new Customer("Michelle", "Dessler"));
@@ -47,7 +47,7 @@ public class Application {
             // fetch customers by last name
             log.info("Customer found with findByLastName('Bauer'):");
             log.info("--------------------------------------------");
-            repository.findByLastName("Bauer").forEach(bauer -> {
+            repository.findByLastName("SSS").forEach(bauer -> {
                 log.info(bauer.toString());
             });
             // for (Customer bauer : repository.findByLastName("Bauer")) {
